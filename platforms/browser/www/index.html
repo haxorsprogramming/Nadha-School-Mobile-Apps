@@ -11,7 +11,7 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-	<title>Buzzle - Classifed Ads Mobile Template</title>
+	<title>Nadha School - Login Page</title>
 	<link rel="stylesheet" href="ladun/css/framework7.bundle.min.css">
 	<link rel="stylesheet" href="ladun/css/style.css">
 
@@ -42,8 +42,8 @@
                     <!-- sign in -->
                     <div class="sign-in">
                         <div class="content text-center">
-                            <img class="image-illustration" src="ladun/images/contact-illustration.png" alt="">
-                            <h3>Welcome Back!</h3>
+                            <img class="image-illustration" src="ladun/images/nadha_school_logo.jpg" alt="" style="width:200px;">
+                            <h3>Selamat datang ... </h3>
                         </div>
             
                         <!-- separator -->
@@ -70,7 +70,7 @@
                                 </ul>
                                 <div class="button-default">
                                     <div class="container">
-                                        <button class="button">Sign In</button>
+                                        <a href='#!' class="button" @click='loginAtc'>Sign In</a>
                                     </div>
                                 </div>
                             </form>
@@ -99,9 +99,15 @@
 
 	<!-- script -->
 	<script src="ladun/js/framework7.bundle.min.js"></script>
-	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="ladun/js/routes.js"></script>
-	<script src="ladun/js/app.js"></script>
+    <script src="ladun/js/app.js"></script>
+    <script>
+        // SET ALAMAT API BACKEND
+        const server = 'http://api.haxors.or.id/nadha-school/';
+    </script>
+    <script src="ladun/js/nadha-school-login.js"></script>
 	<!-- end script -->
 
 </body>

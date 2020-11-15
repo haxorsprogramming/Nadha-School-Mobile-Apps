@@ -1,4 +1,3 @@
-// ROUTE 
 var loginHand = new Vue({
     el : '#app',
     data : {
@@ -11,5 +10,3 @@ var loginHand = new Vue({
         }
     }
 });
-
-document.querySelector('#txtEmail').focus();
