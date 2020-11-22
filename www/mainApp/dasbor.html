@@ -23,30 +23,148 @@
         <div class="view view-main view-init ios-edges" data-url="/">
 			<div class="page">
                 <div class="page page-home page-with-subnavbar">
+
                     <div class="toolbar tabbar tabbar-labels toolbar-bottom elevation-6 bg-white">
                         <div class="toolbar-inner">
-                            <a href="#tab-home" class="tab-link tab-link-active">
+                            <a href="#!" class="tab-link tab-link-active" @click="homeAtc" id="btbHome">
                                 <span class="material-icons">home</span>
                                 <span class="tabbar-label">Home</span>
                             </a>
-                            <a href="#tab-favorite" class="tab-link">
+                            <a href="#!" class="tab-link" @click="shopAtc" id="btbShop">
                                 <span class="material-icons">shop</span>
                                 <span class="tabbar-label">Favorites</span>
                             </a>
-                            <a href="#tab-add" class="tab-link addding-ads">
+                            <a href="#!" class="tab-link addding-ads">
                                 <span class="adding-ads">
                                     <span class="material-icons">work</span>
                                 </span>
                             </a>
-                            <a href="#tab-search" class="tab-link">
+                            <a href="#!" class="tab-link">
                                 <span class="material-icons">home</span>
                                 <span class="tabbar-label">Search</span>
                             </a>
-                            <a href="#tab-profile" class="tab-link">
+                            <a href="#!" class="tab-link">
                                 <span class="material-icons">home</span>
                                 <span class="tabbar-label">Profile</span>
                             </a>
                         </div>
+                    </div>
+
+                    <div id="tab-home" class="tab tab-home tab-active">
+                        <!-- navbar -->
+						<div class="navbar navbar-transparent">
+							<div class="navbar-bg"></div>
+							<div class="navbar-inner sliding">
+								<div class="left">
+									<!-- <a href="#!" class="link" data-panel=".sidebar-left">
+										<span class="material-icons">home</span>
+									</a> -->
+								</div>
+								<div class="right">
+									<a href="#!" data-transition="f7-dive" class="link">
+										<span class="material-icons">home</span>
+									</a>
+								</div>
+							</div>
+						</div>
+                        <!-- end navbar -->
+                        <!-- hader page -->
+						<div class="header-title">
+							<div class="container">
+								<h3>Beranda - NadhaSchool</h3>
+							</div>
+						</div>
+                        <!-- end hader page -->
+                        
+                        <!-- separator -->
+						<div class="separator-small"></div>
+                        <!-- end separator -->
+                        
+
+                         <!-- promo banner -->
+						<div class="promo-banner">
+							<div class="container">
+								<a href="">
+									<div class="content-box">
+										<div class="content color-white content-left">
+											<h5 class="title-item color-white">Aditia Darma Nst</h5>
+											<p class="text-small">Ilmu Komputer - Fakultas Sains dan Teknologi</p>
+										</div>
+										<div class="content content-right">
+                                            <img src="../ladun/images/users/adit.jpg" style="width:60px;border-radius: 50%;">
+											
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end promo banner -->
+
+                        <!-- categories -->
+						<div class="categories">
+							<div class="block-title">
+								<h3>Menu Utama</h3>
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Cars</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Bikes</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Properties</h6>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Electronics</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Handphone</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons md-48" class="color-red">home</span>
+												<h6 class="second-title">Show All</h6>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <!-- end categories -->
+                        
+
+                       
+
                     </div>
                 </div>
             </div>
