@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
@@ -11,15 +11,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-	<title>Nadha School - Login Page</title>
+	<title>Nadha School - Dasbor</title>
 	<link rel="stylesheet" href="../ladun/css/framework7.bundle.min.css">
+
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />	
+
 	<link rel="stylesheet" href="../ladun/css/style.css">
 
 </head>
 <body>
 	
-	<div id="app">
-
+	<div id="app" >
+		
         <div class="view view-main view-init ios-edges" data-url="/">
 			<div class="page">
                 <div class="page page-home page-with-subnavbar">
@@ -31,12 +34,12 @@
                                 <span class="tabbar-label">Home</span>
                             </a>
                             <a href="#!" class="tab-link" @click="shopAtc" id="btbShop">
-                                <span class="material-icons">shop</span>
-                                <span class="tabbar-label">Favorites</span>
+                                <span class="material-icons">message</span>
+                                <span class="tabbar-label">Pesan</span>
                             </a>
                             <a href="#!" class="tab-link addding-ads">
                                 <span class="adding-ads">
-                                    <span class="material-icons">work</span>
+                                    <span class="material-icons">person</span>
                                 </span>
                             </a>
                             <a href="#!" class="tab-link">
@@ -50,93 +53,184 @@
                         </div>
                     </div>
 
-                    <div class="tabs">
-                        <div id="tab-home" class="tab tab-home tab-active">
-                            <!-- ===== TAB HOME ===== -->
-    
-                            <!-- navbar -->
-                            <div class="navbar navbar-transparent">
-                                <div class="navbar-bg"></div>
-                                <div class="navbar-inner sliding">
-                                    <div class="left">
-                                        <a href="#!" class="link panel-open" data-panel=".sidebar-left">
-                                            <span class="material-icons">menu</span>
-                                        </a>
-                                    </div>
-                                    <div class="right">
-                                        <a href="#!" data-transition="f7-dive" class="link">
-                                            <span class="material-icons">notifications</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end navbar -->
-                            <!-- sidebar / panel -->
-						<div class="panel-backdrop"></div>
-						<div class="panel panel-left sidebar-left panel-cover panel-init">
-
-							<!-- separator -->
-							<div class="separator-large"></div>
-							<!-- end separator -->
-
-							<div class="panel-header">
-								<div class="container">
-									<div class="content">
-										<img src="#!" alt="">
-										<div class="title-name">
-											<h5>Philips Ramsey</h5>
-											<p class="text-small">Member Since 2020</p>
-										</div>
-									</div>
+                    <div id="tab-home" class="tab tab-home tab-active">
+                        <!-- navbar -->
+						<div class="navbar navbar-transparent">
+							<div class="navbar-bg"></div>
+							<div class="navbar-inner sliding">
+								<div class="left">
+									<!-- <a href="#!" class="link" data-panel=".sidebar-left">
+										<span class="material-icons">home</span>
+									</a> -->
+								</div>
+								<div class="right">
+									<a href="#!" data-transition="f7-dive" class="link" @click="logOutAtc()">
+										<span class="material-icons">login</span>
+									</a>
 								</div>
 							</div>
-
-							<div class="list">
-								<ul>
-									<li>
-										<a href="/my-ads/" data-transition="f7-dive" class="item-link item-content panel-close">
-											<div class="item-media">
-												
-											</div>
-											<div class="item-inner">
-												<div class="item-title">My Ads</div>
-											</div>
-										</a>
-									</li>
-									<li>
-										<a href="/favorites/" data-transition="f7-dive" class="item-link item-content panel-close">
-											<div class="item-media">
-												
-											</div>
-											<div class="item-inner">
-												<div class="item-title">Favorites</div>
-											</div>
-										</a>
-									</li>
-									
-								</ul>
-							</div>
-
 						</div>
-						<!-- end sidebar / panel -->
-                        </div>
-
-                    </div>
-
-
-                    <!-- hader page -->
+                        <!-- end navbar -->
+                        <!-- hader page -->
 						<div class="header-title">
 							<div class="container">
-								<h3>Discover</h3>
+								<h3>Beranda - NadhaSchool</h3>
 							</div>
 						</div>
                         <!-- end hader page -->
                         
                         <!-- separator -->
 						<div class="separator-small"></div>
-						<!-- end separator -->
+                        <!-- end separator -->
+                        
 
-                    
+                         <!-- promo banner -->
+						<div class="promo-banner">
+							<div class="container">
+								<a href="">
+									<div class="content-box">
+										<div class="content color-white content-left">
+											<h5 class="title-item color-white">Aditia Darma Nst</h5>
+											<p class="text-small">Ilmu Komputer - Fakultas Sains dan Teknologi</p>
+										</div>
+										<div class="content content-right">
+                                            <img src="../ladun/images/users/adit.jpg" style="width:60px;border-radius: 50%;">
+											
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- end promo banner -->
+
+                        <!-- categories -->
+						<div class="categories">
+							<div class="block-title">
+								<h3>Menu Utama</h3>
+							</div>
+							<div class="container">
+								<div class="row">
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive" class="btn" @click="matkulAtc">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Matkul</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Tugas</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Absensi</h6>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Electronics</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">home</span>
+												<h6 class="second-title">Handphone</h6>
+											</div>
+										</a>
+									</div>
+									<div class="col-33">
+										<a href="#!" data-transition="f7-dive">
+											<div class="content">
+												<span class="material-icons">apps</span>
+												<h6 class="second-title">Semua</h6>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <!-- end categories -->
+						
+						
+						<!-- featured ads -->
+						<div class="featured">
+							<div class="block-title">
+								<h3>Berita Kampus</h3>
+							</div>
+							<div class="container">
+								<div class="swiper-container swiper-init" data-slides-per-view="auto" data-space-between="15">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" v-for="br in berita">
+											<a href="#!" data-transition="f7-dive">
+												<div class="content-item radius-default bg-white">
+													<div class="featured-symbol"> <span class="material-icons">home</span></div>
+													<img class="full-width radius-top-only" src="../ladun/images/berita/1.jpg" alt="">
+													<div class="text-desc">
+														<p class="title-item">Greeny-c2 1992</p>
+														<p class="price-item" style="font-size:11px;">{{br.judul}}</p>
+														<p class="location-item">19 April 2020</p>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end featured ads -->
+						<div class="featured">
+							<div class="block-title">
+								<h3>Tugas Kuliah</h3>
+							</div>
+							<div class="container">
+								<div class="favorites">
+									<div class="container">
+										<div class="content-wrapper">
+											<a href="#">
+												<div class="favorite-symbol active-symbol"><span class="material-icons">home</span></div>
+											</a>
+											<div class="content-image">
+												<img class="radius-default" src="../ladun/images/bike1.jpg" alt="">
+											</div>
+											<div class="boxed">
+												<p class="title-item">Mobilus gray</p>
+												<p class="price-item">$8888</p> 
+												<ul class="rating-item">
+													<li><span class="material-icons">home</span></li>
+													<li><span class="material-icons">home</span></li>
+													<li><span class="material-icons">home</span></li>
+													<li><span class="material-icons">home</span></li>
+													<li><span class="material-icons">home</span></li>
+												</ul>
+												<p class="location-item"><span class="material-icons">home</span>NEW YORK, US</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+                       <div style="margin-bottom:50px;">
+
+					   </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -145,16 +239,26 @@
     </div>
 
 	<!-- script -->
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 	<script src="../ladun/js/framework7.bundle.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="../ladun/js/routes.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	
+	
+	<script src="../ladun/js/nadha-school-dasbor.js"></script>
     <script src="../ladun/js/app.js"></script>
-    <script>
-        // SET ALAMAT API BACKEND
+	
+	
+
+	<script>
+    	// SET ALAMAT API BACKEND
         const server = 'http://api.haxors.or.id/nadha-school/';
     </script>
-    <script src="../ladun/js/nadha-school-dasbor.js"></script>
+   
 	<!-- end script -->
 
 </body>
